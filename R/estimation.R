@@ -53,7 +53,7 @@ Please check the new documentation with ?BRISC_estimation.')
   y <- y[ord]
   if (verbose) {
     time_end_ordering <- proc.time()
-    print("ordering time:")
+    cat("runtime for ordering:")
     print(time_end_ordering - time_start_ordering)
   }
 
