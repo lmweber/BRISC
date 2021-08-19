@@ -54,7 +54,7 @@ Please check the new documentation with ?BRISC_estimation.')
   if (verbose) {
     time_end_ordering <- proc.time()
     print("ordering time:")
-    print(time_end - time_start)
+    print(time_end_ordering - time_start_ordering)
   }
 
 
