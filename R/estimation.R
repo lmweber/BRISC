@@ -42,20 +42,20 @@ Please check the new documentation with ?BRISC_estimation.')
     cat(paste(("----------------------------------------"), collapse="   "), "\n"); cat(paste(("\tOrdering Coordinates"), collapse="   "), "\n")
     }
   if (verbose) {
-    time_start <- proc.time()
+    time_start_ordering <- proc.time()
   }
   if(order == "AMMD"){ord <- orderMaxMinLocal(coords)}
   if(order == "Sum_coords"){ord <- order(coords[,1] + coords[,2])}
   coords <- coords[ord,]
-  if (verbose) {
-    time_end <- proc.time()
-    message("ordering time:")
-    print(time_end - time_start)
-  }
 
   ##Input data and ordering
   X <- x[ord,,drop=FALSE]
   y <- y[ord]
+  if (verbose) {
+    time_end_ordering <- proc.time()
+    print("ordering time:")
+    print(time_end - time_start)
+  }
 
 
 
